@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>U+ | UNIPLAC</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+
+    <header class="topo">
+      <div class="topo-linha">
+        <div class="marca">
+          <div class="logo-mini">U+</div>
+          <div class="marca-texto">
+            <h1>UNIPLAC</h1>
+            <span>Ambiente acadêmico do aluno</span>
+          </div>
+        </div>
+
+        <div class="topo-acoes">
+          <button class="icone-topo">🔍</button>
+          <button class="icone-topo">🔔</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="conteudo">
+      <section class="card recado-topo">
+        <div class="recado-header">
+          <span class="pill pill-azul">Recado rápido</span>
+          <span class="recado-tempo">expira hoje</span>
+        </div>
+
+        <h2>Prof. Rafael Gattino publicou um novo aviso</h2>
+        <p>
+          Projeto introdutório de Sistemas de Informação disponível para a turma.
+          Participações no app podem gerar acompanhamento mais preciso da evolução da sala.
+        </p>
+      </section>
+
+      <section class="perfil card">
+        <div class="perfil-info">
+          <div class="avatar">AR</div>
+
+          <div>
+            <h2>Alexandre Rocha</h2>
+            <p>Sistemas de Informação • 1º semestre</p>
+          </div>
+        </div>
+
+        <div class="perfil-metricas">
+          <div class="metrica">
+            <span>Participações</span>
+            <strong id="pontos">0</strong>
+          </div>
+
+          <div class="metrica">
+            <span>Atividades concluídas</span>
+            <strong id="concluidos">0</strong>
+          </div>
+        </div>
+
+        <div class="progresso-area">
+          <div class="progresso-texto">
+            <span>Evolução semanal</span>
+            <span id="porcentagem">0%</span>
+          </div>
+
+          <div class="barra">
+            <div class="barra-preenchimento" id="barra-preenchimento"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feed">
+
+        <article class="post card">
+          <div class="post-topo">
+            <div class="post-autor-avatar">RG</div>
+            <div>
+              <h3>Rafael Gattino</h3>
+              <span>Sistemas de Informação • agora</span>
+            </div>
+          </div>
+
+          <p class="post-texto">
+            Novo desafio liberado para a turma: desenvolver uma solução simples com foco em lógica,
+            estrutura e organização do raciocínio.
+          </p>
+
+          <div class="bloco-destaque">
+            <strong>Atividade rápida</strong>
+            <p>Tempo estimado: 15 min • Retorno acadêmico visível dentro do app</p>
+          </div>
+
+          <div class="post-acoes">
+            <button class="acao-btn">❤️</button>
+            <button class="acao-btn">💬</button>
+            <button class="btn-concluir" data-pontos="10">Participar</button>
+          </div>
+        </article>
+
+        <article class="post card">
+          <div class="post-topo">
+            <div class="post-autor-avatar uniplac">U</div>
+            <div>
+              <h3>UNIPLAC</h3>
+              <span>Institucional • há 1h</span>
+            </div>
+          </div>
+
+          <p class="post-texto">
+            Centralize avisos, atividades, feedbacks e oportunidades acadêmicas em um único ambiente.
+          </p>
+
+          <img
+            class="post-img"
+            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80"
+            alt="Imagem ilustrativa de ambiente universitário"
+          />
+
+          <div class="post-acoes">
+            <button class="acao-btn">❤️</button>
+            <button class="acao-btn">💬</button>
+            <button class="acao-btn">📌</button>
+          </div>
+        </article>
+
+        <article class="post card">
+          <div class="post-topo">
+            <div class="post-autor-avatar curso">SI</div>
+            <div>
+              <h3>Curso de Sistemas</h3>
+              <span>Turma • há 2h</span>
+            </div>
+          </div>
+
+          <p class="post-texto">
+            Espaço para dúvidas rápidas, avisos e retorno sobre conteúdos que precisem ser retomados em aula.
+          </p>
+
+          <div class="feedback-aula">
+            <h4>Como foi a última aula?</h4>
+            <p>Seu retorno ajuda o professor a entender a turma sem expor ninguém.</p>
+
+            <div class="feedback-opcoes">
+              <button class="btn-feedback" data-tipo="entendi">👍 Entendi</button>
+              <button class="btn-feedback" data-tipo="medio">😐 Mais ou menos</button>
+              <button class="btn-feedback" data-tipo="duvida">🤔 Com dúvida</button>
+              <button class="btn-feedback" data-tipo="nao-entendi">😕 Não entendi</button>
+            </div>
+
+            <p id="mensagem-feedback-aula" class="mensagem-feedback-aula"></p>
+          </div>
+        </article>
+
+        <article class="post card relatorio-card">
+          <div class="post-topo">
+            <div class="post-autor-avatar relatorio">📊</div>
+            <div>
+              <h3>Retorno consolidado para o professor</h3>
+              <span>Visão de acompanhamento da turma</span>
+            </div>
+          </div>
+
+          <div class="relatorio-lista">
+            <div class="linha-relatorio">
+              <span>👍 Entenderam</span>
+              <strong id="valor-entendi">0</strong>
+            </div>
+
+            <div class="barra-relatorio">
+              <div class="barra-interna" id="barra-entendi"></div>
+            </div>
+
+            <div class="linha-relatorio">
+              <span>😐 Mais ou menos</span>
+              <strong id="valor-medio">0</strong>
+            </div>
+
+            <div class="barra-relatorio">
+              <div class="barra-interna" id="barra-medio"></div>
+            </div>
+
+            <div class="linha-relatorio">
+              <span>🤔 Com dúvida</span>
+              <strong id="valor-duvida">0</strong>
+            </div>
+
+            <div class="barra-relatorio">
+              <div class="barra-interna" id="barra-duvida"></div>
+            </div>
+
+            <div class="linha-relatorio">
+              <span>😕 Não entenderam</span>
+              <strong id="valor-nao-entendi">0</strong>
+            </div>
+
+            <div class="barra-relatorio">
+              <div class="barra-interna" id="barra-nao-entendi"></div>
+            </div>
+          </div>
+        </article>
+
+      </section>
+    </main>
+
+    <nav class="rodape">
+      <button class="nav-btn ativo" title="Início">🏠</button>
+      <button class="nav-btn" title="Explorar">🔎</button>
+      <button class="nav-btn destaque" title="Criar">➕</button>
+      <button class="nav-btn" title="Mensagens">💬</button>
+      <button class="nav-btn" title="Perfil">👤</button>
+    </nav>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
