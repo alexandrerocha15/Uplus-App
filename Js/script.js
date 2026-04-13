@@ -95,3 +95,8 @@ botoesFeedback.forEach((botao) => {
 
 atualizarPainelAluno();
 atualizarRelatorioProfessor();
+
+// salva dados no navegador
+localStorage.setItem("participacoes", participacoes);
+localStorage.setItem("concluidos", concluidos);
+localStorage.setItem("nomeAluno", "Alexandre Rocha");
